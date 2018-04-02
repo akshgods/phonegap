@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!--         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Speak</title>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/icon.css">
+<link rel="stylesheet" href="css/materialize.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<style>
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(img/loaders/loader-64x/Preloader_2.gif) center no-repeat #fff;
+}
+</style>
+    </head>
+    <body>
+        <div class="se-pre-con"></div>
+<div>
+<div id="mynavbar">
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right searchOpenerUl">
+                <li>
+                    <a href="#!">
+                        <i class="material-icons searchOpener" onclick="search()">search</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab">
+                    <a class="active" href="#test1" >Test 1</a>
+                </li>
+                <li class="tab">
+                    <a  href="#test2" >Test 2</a>
+                </li>
+                <li class="tab disabled">
+                    <a href="#test3" >Disabled Tab</a>
+                </li>
+                <li class="tab">
+                    <a href="#test4" >Test 4</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-search col s10 m10 l10">
+            <form>
+                <div class="input-field">
+                    <input id="search" type="search" required onblur="searchOff()">
+                    <label class="label-icon" for="search">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="http://materializecss.com/images/office.jpg">
+                </div>
+                <a href="#user">
+                    <img class="circle" src="http://materializecss.com/images/yuna.jpg">
+                </a>
+                <a href="#name">
+                    <span class="white-text name">John Doe</span>
+                </a>
+                <a href="#email">
+                    <span class="white-text email">jdandturk@gmail.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#!">
+                <i class="material-icons">cloud</i>First Link With Icon</a>
+        </li>
+        <li>
+            <a href="#!">Second Link</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li>
+            <a class="subheader">Subheader</a>
+        </li>
+        <li>
+            <a class="waves-effect" href="#!">Third Link With Waves</a>
+        </li>
+    </ul>
+    
+    <div id="test1" class="col s12">
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col s6 m4 offset-m4">
+                    <a class="modal-trigger" href="#modal1">
+                        <div class="card">
+                            <div class="card-image video-thumbnail">
+                                <img src="https://ithemes.com/wp-content/uploads/2017/02/SEO-Summit-vFB.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="flow-text truncate">SEO Summit</span>
+                                <p>April 2017</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <video class="responsive-video" controls muted autoplay>
+                        <source src="https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-teal btn-flat">Done</a>
+                </div>
+            </div>
+    </div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+    <div id="test4" class="col s12">Test 4</div>
+</div>
+<div>
+  
+
+<!-- scripts -->
+        <script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/fastclick.js"></script>
+<script src="js/materialize.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

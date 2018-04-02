@@ -1,0 +1,22 @@
+/* navbar search code */
+nav.nav-extended .nav-search{
+display: none;
+}
+input#search {
+    margin: 0px;
+    padding-left: 50px;
+}
+nav.nav-extended.showSearch .nav-search{
+display: block;
+}
+body nav.nav-extended.showSearch .nav-wrapper,
+body nav.nav-extended.showSearch .searchOpenerUl,
+body nav.nav-extended.showSearch .nav-content{
+display: none;
+}
+
+ul#mobile-demo {
+    width: 80%;
+}
+
+/* navbar search  sidebar code end */
